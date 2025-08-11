@@ -1,0 +1,209 @@
+:root {
+  --brand-gradient: linear-gradient(120deg, #947cf3 0%, #ae6dd7 50%, #f073ae 100%);
+  --brand-gradient-btn: linear-gradient(90deg, #8267f7 10%, #e077b9 90%);
+  --white: #fff;
+  --input-bg: #f6f3fa;
+  --input-border: #ece4f8;
+  --input-focus: #ae6dd7;
+  --card-radius: 1.2rem;
+  --shadow: 0 4px 32px #ad82d14d;
+  --muted: #8871a6;
+  --text-primary: #2d2140;
+  --text-secondary: #6f5a92;
+  --bg-primary: #fef7fd;
+  --bg-secondary: #f4e9fa;
+  --gradient-hero: linear-gradient(120deg, #7b60f8 0%, #d66dd8 100%);
+  --gradient-primary: linear-gradient(90deg, #8f6fff 0%, #ea8ad8 100%);
+}
+
+body {
+  background: var(--brand-gradient), #fef7fd;
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.gradient-center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+}
+
+.form-outer-card {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-outer-card h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #7a49b2;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.input-group textarea {
+  width: 100%;
+  padding: 1.1em 1em;
+  border-radius: 0.9em;
+  border: 1.6px solid var(--input-border);
+  background: var(--input-bg);
+  font-size: 1.1rem;
+  color: #5b3c6f;
+  box-shadow: 0 1.5px 6px #b98bcb0c;
+  resize: vertical;
+  min-height: 4.5rem;
+  transition: border 0.18s, box-shadow 0.25s;
+  outline: none;
+}
+
+.input-group textarea:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 10px 0 var(--input-focus);
+}
+
+.gradient-btn {
+  width: 100%;
+  padding: 1.15em 0;
+  border: none;
+  border-radius: 1em;
+  font-weight: 700;
+  font-size: 1.15rem;
+  background: var(--brand-gradient-btn);
+  color: var(--white);
+  box-shadow: 0 0 28px #d576bb26;
+  cursor: pointer;
+  transition: filter 0.18s, box-shadow 0.19s;
+  letter-spacing: 0.03em;
+  margin-top: 0.7em;
+}
+
+.gradient-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.gradient-btn:hover,
+.gradient-btn:focus {
+  filter: brightness(1.05);
+  box-shadow: 0 0 45px #e9aed75a;
+}
+
+.result-card {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.2rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+.result-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #533575;
+  margin-bottom: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .form-outer-card,
+  .result-card {
+    max-width: 95vw;
+    padding: 1.5rem 1rem;
+  }
+}
+.mock-center-container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: start;
+  background: var(--brand-gradient);
+  padding: 3vw 0;
+}
+
+.mock-interview-result-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 36px 0 #8267f72f, 0 1.5px 8px #7a49b227;
+  max-width: 600px;
+  width: 95vw;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  min-height: 65vh;
+}
+
+.mock-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #6f45c2;
+  margin-bottom: 0.8em;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.mock-question-block {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #ede6f9;
+  padding-bottom: 1.2em;
+}
+.mock-question-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.mock-summary-list {
+  margin: 0.7em 0 0 0;
+  padding: 0 0 0 1.4em;
+  list-style: disc inside;
+}
+.mock-bullet-feedback {
+  margin: 0;
+  padding: 0 0 0 1.4em;
+  list-style: circle inside;
+}
+
+.mock-qno {
+  background: linear-gradient(90deg,#8f6fff,#ea8ad8);
+  color: #fff;
+  border-radius: 0.4em;
+  font-size: 0.93em;
+  padding: 0.14em 0.54em 0.11em;
+  margin-right: 0.7em;
+  font-weight: 600;
+}
+@media (max-width: 750px) {
+  .mock-interview-result-card {
+    max-width: 99vw;
+    padding: 1.3rem 0.6em;
+  }
+}
+
